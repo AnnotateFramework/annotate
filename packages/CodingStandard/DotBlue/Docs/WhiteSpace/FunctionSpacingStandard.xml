@@ -1,0 +1,44 @@
+<documentation title="Methods spacing">
+    <standard>
+        <![CDATA[
+    There must be 3 empty lines between methods.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: 3 empty lines between methods">
+            <![CDATA[
+class Foo
+{
+
+    public function foo()
+    {
+    }
+    <em></em>
+    <em></em>
+    <em></em>
+    public function bar()
+    {
+    }
+
+}
+]]>
+        </code>
+        <code title="Invalid: 2 empty lines between methods">
+            <![CDATA[
+class Foo
+{
+
+    public function foo()
+    {
+    }
+    <em></em>
+    <em></em>
+    public function bar()
+    {
+    }
+
+}
+]]>
+        </code>
+    </code_comparison>
+</documentation>

@@ -1,0 +1,27 @@
+<documentation title="Bool naming convention">
+    <standard>
+    <![CDATA[
+    Using 'boolean' is forbidden. Use 'bool' instead.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Use 'bool'">
+        <![CDATA[
+/**
+ * @param  <em>bool</em>
+ * @return <em>bool</em>
+ */
+ /** @var <em>bool</em> $foo */
+        ]]>
+        </code>
+        <code title="Invalid: Usage of 'boolean' is forbidden">
+        <![CDATA[
+/**
+ * @param  <em>boolean</em>
+ * @return <em>boolean</em>
+ */
+ /** @var <em>boolean</em> $foo */
+        ]]>
+        </code>
+    </code_comparison>
+</documentation>

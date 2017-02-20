@@ -1,0 +1,23 @@
+{
+  "name": "annotate/backend",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Michal Vyšinský",
+      "email": "michal@vysinsky.cz"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "annotate/framework": "@dev",
+    "annotate/modules": "@dev",
+    "annotate/collections": "@dev",
+    "kdyby/events": "~3.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Annotate\\Backend\\": "src/"
+    }
+  }
+}

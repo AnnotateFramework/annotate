@@ -1,0 +1,19 @@
+<documentation title="Inline methods and functions">
+    <standard>
+        <![CDATA[
+    Inline methods are enabled in case there is no body of the method.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Method has no body. Can be on one line.">
+            <![CDATA[
+public function foo() {<em> </em>}
+        ]]>
+        </code>
+        <code title="Invalid: Method has body. Cannot be on one line.">
+            <![CDATA[
+public function foo() {<em> echo "bar"; </em>}
+        ]]>
+        </code>
+    </code_comparison>
+</documentation>
