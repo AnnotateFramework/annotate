@@ -15,6 +15,10 @@
     "annotate/collections": "@dev",
     "kdyby/events": "~3.0.0"
   },
+  "require-dev": {
+    "annotate/diagnostics": "@dev",
+    "annotate/templating": "@dev"
+  },
   "autoload": {
     "psr-4": {
       "Annotate\\Backend\\": "src/"
