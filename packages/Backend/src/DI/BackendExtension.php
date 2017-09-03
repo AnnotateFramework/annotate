@@ -20,9 +20,7 @@ class BackendExtension extends CompilerExtension
 		$builder = $this->getContainerBuilder();
 
 		$builder->addDefinition($this->prefix('routeProvider'))
-			->setClass(BackendRouteProvider::class, [
-				'secured' => isset($builder->parameters['https']) ? $builder->parameters['https'] : FALSE,
-			]);
+			->setClass(BackendRouteProvider::class);
 
 		$builder->addDefinition($this->prefix('modulesFactory'))
 			->setClass(BackendModulesFactory::class)
