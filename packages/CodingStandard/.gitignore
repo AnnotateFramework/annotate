@@ -1,5 +1,0 @@
-.idea
-vendor
-composer.lock
-*/tests/output
-*/tests/invalid/*.fixed

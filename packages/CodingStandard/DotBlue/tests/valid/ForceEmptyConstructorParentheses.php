@@ -1,3 +1,0 @@
-<?php
-
-$foo = new Foo();

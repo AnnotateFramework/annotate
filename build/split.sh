@@ -6,7 +6,6 @@ git subsplit init ${GH}/annotate.git
 LAST_TAG=$(git tag -l | tail -n1);
 
 git subsplit publish --heads="master" --tags=$LAST_TAG packages/Backend:${GH}/backend.git
-git subsplit publish --heads="master" --tags=$LAST_TAG packages/CodingStandard:${GH}/coding-standard.git
 git subsplit publish --heads="master" --tags=$LAST_TAG packages/Collections:${GH}/collections.git
 git subsplit publish --heads="master" --tags=$LAST_TAG packages/Diagnostics:${GH}/diagnostics.git
 git subsplit publish --heads="master" --tags=$LAST_TAG packages/Framework:${GH}/framework.git
