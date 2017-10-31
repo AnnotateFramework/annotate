@@ -1,0 +1,17 @@
+{
+  "name": "annotate/code-style",
+  "description": "AnnotateFramework code style",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {
+    "nette/tester": "^1.0",
+    "squizlabs/php_codesniffer": "~2.1"
+  },
+  "autoload-dev": {
+    "classmap": [
+      "Annotate/tests/helpers"
+    ]
+  }
+}

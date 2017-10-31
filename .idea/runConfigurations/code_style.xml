@@ -3,7 +3,7 @@
     <option name="phpIniPath" value="" />
     <option name="phpInterpreterId" value="9b91f26c-e226-44e3-990d-3e9bfb384228" />
     <option name="setupScriptPath" value="" />
-    <option name="testScope" value="$PROJECT_DIR$/code-style/Annotate/tests" />
+    <option name="testScope" value="$PROJECT_DIR$/packages/CodeStyle/Annotate/tests" />
     <option name="testerExecutable" value="$PROJECT_DIR$/vendor/bin/tester" />
     <option name="testerOptions" value="" />
     <method />
