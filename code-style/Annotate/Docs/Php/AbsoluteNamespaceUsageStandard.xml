@@ -1,0 +1,21 @@
+<documentation title="Absolute namespace usage">
+    <standard>
+        <![CDATA[
+    Absolute namespace usage is forbidden. Import classes with 'use' statement.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: Class imported with 'use' statement.">
+            <![CDATA[
+<em>use Nette\Utils\Strings;</em>
+
+public function foo(Strings $string)
+        ]]>
+        </code>
+        <code title="Invalid: Absolute namespace used.">
+            <![CDATA[
+public function foo(<em>\Nette\Utils\Strings</em> $string)
+        ]]>
+        </code>
+    </code_comparison>
+</documentation>

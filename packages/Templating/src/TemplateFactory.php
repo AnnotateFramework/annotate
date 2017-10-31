@@ -2,11 +2,10 @@
 
 namespace Annotate\Templating;
 
-
 use Annotate\Diagnostics\CmsPanel;
 use Nette\Application\UI\Presenter;
 use Nette\Bridges\ApplicationLatte\Template;
-use Nette\Latte\Engine;
+use Latte\Engine;
 use Nette\Object;
 use Nette\Templating\FileTemplate;
 
@@ -53,7 +52,7 @@ class TemplateFactory extends Object implements ITemplateFactory
 		$this->templates[] = $this->templatesDirectory . "$templateFile.latte";
 
 		foreach ($this->templates as $t) {
-			if (\file_exists($t)) {
+			if (file_exists($t)) {
 				CmsPanel::$template = $t;
 				break;
 			}
@@ -72,7 +71,7 @@ class TemplateFactory extends Object implements ITemplateFactory
 		$this->layouts[] = $this->templatesDirectory . "$layout.latte";
 
 		foreach ($this->layouts as $l) {
-			if (\file_exists($l)) {
+			if (file_exists($l)) {
 				CmsPanel::$layout = $l;
 				break;
 			}

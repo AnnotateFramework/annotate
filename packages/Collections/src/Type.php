@@ -2,6 +2,7 @@
 
 namespace Annotate\Collections;
 
+
 class Type
 {
 

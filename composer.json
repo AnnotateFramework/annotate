@@ -1,0 +1,27 @@
+{
+  "name": "annotate/annotate",
+  "description": "AnnotateFramework monorepo",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "require": {},
+  "require-dev": {
+    "janmarek/mockista": "@dev",
+    "kdyby/events": "^3.1",
+    "latte/latte": "~2.4.0",
+    "nette/application": "~2.4.0",
+    "nette/bootstrap": "~2.4.0",
+    "nette/di": "~2.4.0",
+    "nette/finder": "~2.4.0",
+    "nette/security": "~2.4.0",
+    "nette/tester": "^1.0",
+    "nextras/forms": "~2.0.0",
+    "squizlabs/php_codesniffer": "~2.1",
+    "tracy/tracy": "~2.4.0"
+  },
+  "autoload-dev": {
+    "classmap": [
+      "code-style/Annotate/tests/helpers"
+    ]
+  }
+}

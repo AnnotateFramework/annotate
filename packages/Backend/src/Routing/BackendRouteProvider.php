@@ -13,13 +13,15 @@ class BackendRouteProvider implements IRouteProvider
 	public function register(IRouter $router)
 	{
 		$router[] = new Route(
-			"admin/login", [
+			"admin/login",
+            [
 				"presenter" => "Backend",
 				"action" => "login",
 			]
 		);
 		$router[] = new Route(
-			"admin[/<cmsmodule>[/<action>[/<id>]]]", [
+			"admin[/<cmsmodule>[/<action>[/<id>]]]",
+            [
 				"presenter" => "Backend",
 				"action" => "default",
 				"model" => NULL,

@@ -50,7 +50,7 @@ class CmsPanel extends Object implements IBarPanel
 		$html .= "<h2>Used layout: <br><b title='" . self::$layout . "'>" . $layout . "</b>";
 
 		foreach (self::$sections as $section) {
-			if (\is_callable($section)) {
+			if (is_callable($section)) {
 				$html .= $section();
 			}
 		}

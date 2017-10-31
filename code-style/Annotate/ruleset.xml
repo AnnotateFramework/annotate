@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<ruleset name="Annotate">
+
+    <description>AnnotateFramework company code standard.</description>
+
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>*/libs/*</exclude-pattern>
+    <exclude-pattern>*/temp/*</exclude-pattern>
+
+    <rule ref="PSR2">
+        <exclude name="Generic.WhiteSpace.ScopeIndent"/>
+        <exclude name="Generic.WhiteSpace.DisallowTabIndent"/>
+        <exclude name="Generic.Files.LineLength"/>
+        <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
+        <exclude name="PSR2.Namespaces.UseDeclaration"/>
+        <exclude name="PSR2.Namespaces.NamespaceDeclaration"/>
+        <exclude name="PSR2.Classes.ClassDeclaration"/>
+        <exclude name="Generic.PHP.LowerCaseConstant"/>
+        <exclude name="Squiz.Scope.MethodScope"/>
+        <exclude name="Squiz.Functions.MultiLineFunctionDeclaration"/>
+        <exclude name="Squiz.WhiteSpace.ScopeClosingBrace"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing"/>
+        <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
+        <exclude name="PSR2.Methods.FunctionCallSignature.Indent"/>
+        <exclude name="PSR2.Methods.FunctionCallSignature.ContentAfterOpenBracket"/>
+        <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
+        <exclude name="PSR2.Methods.FunctionCallSignature.SpaceBeforeCloseBracket"/>
+    </rule>
+
+    <rule ref="Generic.PHP.UpperCaseConstant"/>
+    <rule ref="Annotate.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="3"/>
+        </properties>
+    </rule>
+
+</ruleset>

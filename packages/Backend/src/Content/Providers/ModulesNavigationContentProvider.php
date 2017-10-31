@@ -35,8 +35,8 @@ class ModulesNavigationContentProvider
 		$this->links = new NestedSet(Link::class);
 
 		$definitions = $this->modulesRegister->getDefinitions();
-		foreach ($definitions as $definition) {
 
+		foreach ($definitions as $definition) {
 			if ($definition->getType() == $definition::TYPE_HIDDEN) {
 				continue;
 			}

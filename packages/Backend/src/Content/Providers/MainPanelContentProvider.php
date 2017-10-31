@@ -37,10 +37,10 @@ class MainPanelContentProvider
 	/**
 	 * Adds link to mainPanel
 	 *
-	 * @param       $url
-	 * @param       $title
-	 * @param  null $icon
-	 * @param  int $priority goes from min to max
+	 * @param  string
+	 * @param  string
+	 * @param  string|NULL
+	 * @param  int|NULL goes from min to max
 	 */
 	public function addLink($url, $title, $icon = NULL, $priority = 0)
 	{

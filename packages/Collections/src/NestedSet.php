@@ -7,6 +7,8 @@ use ArrayAccess;
 use IteratorAggregate;
 use Nette\Object;
 use Nette\Utils\ArrayHash;
+use RecursiveArrayIterator;
+use UnexpectedValueException;
 
 
 /**
@@ -27,7 +29,7 @@ class NestedSet extends Object implements ArrayAccess, IteratorAggregate
 	public function __construct($type)
 	{
 		if (!$type) {
-			throw new \UnexpectedValueException('$type attribute cannot must be set');
+			throw new UnexpectedValueException('$type attribute cannot must be set');
 		}
 		$this->type = $type;
 	}
@@ -41,21 +43,33 @@ class NestedSet extends Object implements ArrayAccess, IteratorAggregate
 
 
 
-	public function offsetGet($offset)
+    /**
+     * @param  mixed
+     * @return NestedSet|mixed
+     */
+    public function offsetGet($offset)
 	{
 		return $this->items[$offset];
 	}
 
 
 
-	public function offsetSet($offset, $value)
+    /**
+     * @param  mixed
+     * @param  mixed
+     * @throws Exceptions\DuplicateItemException
+     */
+    public function offsetSet($offset, $value)
 	{
 		$this->addItem($offset, $value);
 	}
 
 
 
-	public function offsetUnset($offset)
+    /**
+     * @param  mixed
+     */
+    public function offsetUnset($offset)
 	{
 		unset($this->items[$offset]);
 	}
@@ -63,19 +77,19 @@ class NestedSet extends Object implements ArrayAccess, IteratorAggregate
 
 
 	/**
-	 * @param $key
-	 * @param $item
+	 * @param  mixed
+	 * @param  mixed
 	 *
 	 * @return NestedSet|mixed
 	 * @throws Exceptions\DuplicateItemException
-	 * @throws \UnexpectedValueException
+	 * @throws UnexpectedValueException
 	 */
 	public function addItem($key, $item)
 	{
 		if (is_object($item)) {
 			if (get_class($item) !== $this->type) {
 				$type = get_class($item);
-				throw new \UnexpectedValueException(
+				throw new UnexpectedValueException(
 					"Cannot add item. Expected instance of '{$this->type}' got instance of '{$type}'"
 				);
 			}
@@ -84,7 +98,7 @@ class NestedSet extends Object implements ArrayAccess, IteratorAggregate
 			if ($this->type == Type::TYPE_ARRAY_HASH && $type == Type::TYPE_ARRAY) {
 				$item = ArrayHash::from($item);
 			} else {
-				throw new \UnexpectedValueException(
+				throw new UnexpectedValueException(
 					"Cannot add item. Expected type '{$this->type}' got item of type '{$type}'"
 				);
 			}
@@ -105,7 +119,7 @@ class NestedSet extends Object implements ArrayAccess, IteratorAggregate
 
 	public function getIterator()
 	{
-		return new \RecursiveArrayIterator($this->items);
+		return new RecursiveArrayIterator($this->items);
 	}
 
 

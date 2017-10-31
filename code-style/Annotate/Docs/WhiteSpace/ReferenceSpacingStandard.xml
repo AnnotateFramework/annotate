@@ -1,0 +1,31 @@
+<documentation title="Reference spacing">
+    <standard>
+        <![CDATA[
+    There must be exactly 1 space between & and variable.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: 1 space between &amp; and variable">
+            <![CDATA[
+$bar = &<em> </em>$foo;
+]]>
+        </code>
+        <code title="Invalid: 2 spaces between &amp; and variable">
+            <![CDATA[
+$bar = &<em>  </em>$foo;
+]]>
+        </code>
+    </code_comparison>
+    <code_comparison>
+        <code title="Valid: 1 space between &amp; and variable">
+            <![CDATA[
+$bar = &<em> </em>$foo;
+]]>
+        </code>
+        <code title="Invalid: no space between &amp; and variable">
+            <![CDATA[
+$bar = &<em></em>$foo;
+]]>
+        </code>
+    </code_comparison>
+</documentation>

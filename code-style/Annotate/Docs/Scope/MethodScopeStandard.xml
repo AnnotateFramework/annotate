@@ -1,0 +1,46 @@
+<documentation title="Methods visibility declaration">
+    <standard>
+    <![CDATA[
+    Visibility must be declared on methods of classes.
+    Visibility must not be declared on methods of interfaces.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid: No visibility declared in interface">
+        <![CDATA[
+interface Foo
+{
+    <em></em>function bar();
+}
+]]>
+        </code>
+        <code title="Invalid: Visibility declared in interface">
+        <![CDATA[
+interface Foo
+{
+    <em>public</em> function bar();
+}
+]]>
+        </code>
+    </code_comparison>
+
+    <code_comparison>
+        <code title="Valid: Visibility declared in class">
+            <![CDATA[
+class Foo
+{
+    <em>public</em> function bar() {}
+}
+]]>
+        </code>
+        <code title="Invalid: Visibility not declared in class">
+            <![CDATA[
+class Foo
+{
+    <em></em>function bar() {}
+}
+]]>
+        </code>
+    </code_comparison>
+
+</documentation>

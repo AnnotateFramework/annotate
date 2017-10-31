@@ -1,0 +1,47 @@
+<documentation title="Constructor call parentheses">
+    <standard>
+        <![CDATA[
+    There must always be parentheses after constructor call.
+    ]]>
+    </standard>
+    <code_comparison>
+        <code title="Valid">
+            <![CDATA[
+$foo = new Foo<em>()</em>;
+        ]]>
+        </code>
+        <code title="Invalid">
+            <![CDATA[
+$foo = new Foo<em></em>;
+        ]]>
+        </code>
+    </code_comparison>
+    <code_comparison>
+        <code title="Valid">
+            <![CDATA[
+$foo = foo(new Foo<em>()</em>);
+        ]]>
+        </code>
+        <code title="Invalid">
+            <![CDATA[
+$foo = foo(new Foo<em></em>);
+        ]]>
+        </code>
+    </code_comparison>
+    <code_comparison>
+        <code title="Valid">
+            <![CDATA[
+$foo = [
+    new Foo(),
+];
+        ]]>
+        </code>
+        <code title="Invalid">
+            <![CDATA[
+$foo = [
+    new Foo,
+];
+        ]]>
+        </code>
+    </code_comparison>
+</documentation>

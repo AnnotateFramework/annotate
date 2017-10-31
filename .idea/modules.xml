@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/annotate.iml" filepath="$PROJECT_DIR$/.idea/annotate.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/annotate-monorepo.iml" filepath="$PROJECT_DIR$/.idea/annotate-monorepo.iml" />
     </modules>
   </component>
 </project>
